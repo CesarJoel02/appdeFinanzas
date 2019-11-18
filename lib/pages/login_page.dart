@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -8,8 +9,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
 
-  TextEditingController _emailditingController;
-  TextEditingController _psswdditingController;
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
 
 
   @override
@@ -21,17 +22,15 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 TextField(
-                  controller: _emailditingController,
+                  controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     hintText: 'email',
-                    
-                    
                   ),
                 ),
                 TextField(
                   obscureText: true,
-                  controller:  _psswdditingController,
+                  controller:  _passwordController,
                   decoration: InputDecoration(
                     hintText: 'password'
                     
@@ -39,7 +38,16 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 RaisedButton(
                   child: Text('LogIn'),
-                  onPressed: (){},
+                  onPressed: (){
+
+                    FirebaseAuth.instance.signInWithEmailAndPassword(
+                      email: _emailController.text,
+                      password: _passwordController.text
+                    ).then((user){
+                      Navigator.pushReplacementNamed(context, 'summary');
+                    }); 
+
+                  },
                 ),
               ],
             ),

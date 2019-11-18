@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "459199795206",
+    "firebase_url": "https://compraventadetickets.firebaseio.com",
+    "project_id": "compraventadetickets",
+    "storage_bucket": "compraventadetickets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459199795206:android:f1c5b81a6210402f653387",
+        "android_client_info": {
+          "package_name": "com.example.app_finanzas_personales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459199795206-7000t8dt2ri2qjhovksoib9dplf89r97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYmKe9z8DOg3L3cCl0dR4A2sVHrih0Huk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459199795206-7000t8dt2ri2qjhovksoib9dplf89r97.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
