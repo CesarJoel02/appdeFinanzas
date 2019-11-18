@@ -49,6 +49,12 @@ class _LoginPageState extends State<LoginPage> {
 
                   },
                 ),
+                RaisedButton(
+                  child: Text('Sign in'),
+                    onPressed: (){
+                    Navigator.pushNamed(context, 'register');
+                    }
+                ),
               ],
             ),
           ),
